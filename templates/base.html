@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="static/css/style1.css">
+    
+    {% block style %}{% endblock style %}
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+<!-- /*y th footer k wqt kia tha */ -->
+
+<style>{% block styleInclude %}{% endblock styleInclude %}</style>
+    
+</head>
+<body>
+
+    <div class="navbar">
+        <a href='/'><img src="static/img/logo.png" class="logo" ></a>
+        <div id="menuBtn">
+            <i class="fa-solid fa-bars" id="menu"></i>
+        </div>
+    </div>
+    {% block body %}{% endblock body %}
+    
+    
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact Us</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="appointment">Take Appointments</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+    
+    
+    
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var  sidenav= document.getElementById("sidenav")
+        var menu = document.getElementById("menu")
+
+
+        sidenav.style.right = "-250px";
+
+
+        menuBtn.onclick = function(){
+            if(sidenav.style.right == "-250px"){
+                sidenav.style.right = "0";
+                
+               menu.class="fa-solid fa-xmark";
+            }
+            else{
+                sidenav.style.right = "-250px";
+                menu.class="fa-solid fa-bars";
+            }
+        }
+    </script>
+    <footer class="footer">
+        <p>Created By Us - @Niharika, @Ishita, @Geetanjali</p>
+    </footer>
+</body>
+</html>

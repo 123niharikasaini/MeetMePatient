@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="static/css/about.css">
+{% endblock style %}
+
+{% block styleInclude %}
+.footer style{
+    width:100vh;
+    height: 7rem;
+    background-color:  #2d0b00;
+    margin-top: auto;
+}
+.footer p{
+    color: white;
+    background: linear-gradient(to right,#00093c, #2d0b00);
+    font-size: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 5rem;
+
+{% endblock styleInclude %}
+
+{% block body %}
+<div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container bottomContainer">
+      <div class="ultimateImg">
+        <img class="mainImg" src="https://thumbs.dreamstime.com/b/doctor-holding-heart-female-stethoscope-34545146.jpg">
+        <div class="purpleBox">
+          <p class="purpleText">
+            We provide best Services and came across 4.9 rating.
+          </p>
+          <img class="stars" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp5.svg">
+        </div>
+      </div>
+      <div class="allText bottomText">
+        <p class="text-blk headingText">
+          About Us
+        </p>
+        <p class="text-blk subHeadingText">
+          MeetMe Patient is a Medical network between patient & Doctor.
+        </p>
+        <p class="text-blk description">
+            MeetMe Patient was established in April 2019 by the co-activity of Medical Second Opinion Company, from the USA and Black Eye Consulting from Malaysia are managing different sorts of wellbeing administrations 24 hours since it was set up.The same is driven by a Team of Internet Pioneers with a demonstrated reputation of helping specialists use the most current advances and showcasing methodologies to develop their practices.You can converse with our wellbeing specialists from anyplace on the planet, regardless of whether you are at home, at the workplace, on an excursion for work or in the midst of some recreation.
+                   
+            A quick, proficient, and financially savvy strategy to get treatment in the solace of your home or office results in better Doctor-Patient communication and treatment. We're having competent doctors of specified domain with whom you can undergo the mutual consultation. We will probably guarantee suitable harmony among quality and cost, beginning from the minute you get to our doctor helpline to the point of recuperation.
+        </p>
+        <a class="explore" href="services">
+          View Services
+        </a>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

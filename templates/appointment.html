@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}Fix Appointment{% endblock title %}
+{% block style %}
+<script type="text/javascript" src="https://github.com/rubyeffect/easy_fill/tree/master/lib/easy_fill-0.0.1.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="static/css/appoint.css" />
+
+{% endblock style %}
+{% block body %}
+
+  <div id="container">
+    <!--This is a division tag for body container-->
+    <div id="body_header">
+      <!--This is a division tag for body header-->
+      <h1>Appointment Request Form</h1>
+      <p>Make your appointments more easier</p>
+
+
+    </div>
+    <form action={% url 'fixAppointment' %} method="POST">
+      {% csrf_token %}
+      <fieldset>
+        <legend><span class="number">1</span>Your basic details</legend>
+        <label for="name">Name*:</label>
+        <input type="text" id="name" name="user_name" placeholder="Atchyut (only first names)" value="{{object.name}}" required pattern="[a-zA-Z0-9]+">
+
+
+        <label for="mail">Email*:</label>
+        <input type="email" id="mail" name="user_email" placeholder="abc@xyz.com" required>
+
+
+        <label for="tel">Contact Num:</label>
+        <input type="tel" id="tel" placeholder="Include country code" name="user_num">
+
+
+
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username" placeholder="@atchyutn" pattern="[a-zA-Z0-9]+">
+
+
+        <select>
+            <h3>Blood-Group</h3>
+                  name="Blood-Group"
+                  id="Blood-Group"
+                  class="formbold-form-input"
+                >
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+
+
+
+
+      </fieldset> 
+
+
+      <fieldset>
+        <legend><span class="number"></span>Appointment Details</legend>
+       <hr>
+        <label for="appointment_description">Appointment Description:</label>
+        <textarea id="appointment_description" name="appointment_description" placeholder="I wish to get an appointment to doctors for ..."></textarea>
+        {% comment %} <select>
+          <label for="bloodGroup">Blood Group</label>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select> {% endcomment %}
+
+
+        <label for="date">Date*:</label>
+        <input type="date" name="date" value="" required></input>
+        <br>
+        <label for="time">Time*:</label>
+        <input type="time" name="time" value="" required></input>
+        <br>
+        {% comment %} <label for="duration">How Long??(Minutes)</label>
+        <input type="radio" name="duration" value="30" checked> 30
+        <input type="radio" name="duration" value="60"> 60
+        <input type="radio" name="duration" value="90"> 90
+        <input type="radio" name="duration" value="more"> more {% endcomment %}
+      </fieldset>
+      <button type="submit">Request For Appointment</button>
+    </form>
+  </div>
+  {% endblock body %}
+

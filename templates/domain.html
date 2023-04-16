@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+    
+    {% block title %}Domains{% endblock title %} 
+    {% block style %}
+    <link rel="stylesheet" href="static/css/services.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="static/css/style1.css" />
+    {% endblock style %}
+    {% block styleInclude %}
+        footer style{
+            width:100vh;
+            height: 7rem;
+            background-color:  #2d0b00;
+            margin-top: auto;
+        }
+        .footer p{
+            color: white;
+            background: linear-gradient(to right,#00093c, #2d0b00);
+            font-size: 1rem;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 5rem;
+        }
+        {% endblock styleInclude %}
+  {% block body %}
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Our Services</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-hammer"></i> -->
+            </div>
+            <h3>
+                <a href="ophthalmologist">
+                    Ophthalmology</h3>
+
+
+            <!-- <p>
+                Ophthalmology is the specialized field of medicine that focuses on the health of the eye. It includes the anatomy, physiology and diseases that may affect the eye. We are focused on pioneering therapies to prevent vision loss, working to discover and develop innovative solutions, aiming to redefine standards of care for people living with vision impairment. Aspects of visual function that may be considered by an ophthalmologist while doing a medical examination to make a diagnosis may include refraction, orthoptics, binocular vision and strabismus.
+                The Department has operated 350 to 500 cases of Cataract using modern technique of Phacoemulsification with Foldable Lens implantation.
+               
+                Other Treatments -
+                 LASIK Surgery
+                 Retina Treatment
+                 Digitl strain and dry eye
+                 ICL Surgery
+                 Contact Lenses
+               
+               
+            </p> -->
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-kidneys"></i>
+              <i class="fa-solid fa-kidneys"></i> -->
+            </div>
+            <h3>
+                <a href="neurology">
+                    Neurology
+                </a>
+              </h3
+             
+               
+            <!-- <p>
+             
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-wrench"></i> -->
+            </div>
+            <h3>
+                <a href="cardiology">
+                  Cardiology
+                </a>
+              </h3>
+            <!-- <p>
+              We give medical prescription..
+            </p> -->
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-truck-pickup"></i> -->
+            </div>
+            <h3>
+                <a href="podiatrist">
+                  Podiatrist
+                </a>
+              </h3>
+           
+            <!-- <p>
+              We provide 100% safe consultation.
+            </p> -->
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-broom"></i> -->
+            </div>
+            <h3>
+                <a href="therapist">
+                  Therapist
+                </a>
+              </h3>
+          </div>
+        </div>
+        <div class="column">
+        <div class="card">
+            <div class="icon-wrapper">
+              <!-- <i class="fas fa-plug"></i> -->
+            </div>
+            <h3>
+                <a href="oncology">
+                  Oncology
+                </a>
+              </h3>
+            <!-- <h3>Neurosurgeon</h3> -->
+            <!-- <p>
+              We provide emergency services.
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% comment %} styling to be appiled {% endcomment %}
+    <a href="/">Logout</a>
+
+    {% endblock body %}

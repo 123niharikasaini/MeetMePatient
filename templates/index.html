@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+  {% block title %}Home{% endblock title %}
+  {% block style %}
+    <link rel="stylesheet" href="static/css/style1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- y abhi daala h niharika s -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+{% endblock style %}
+
+
+<!-- /*y th footer k wqt kia tha */ -->
+
+
+    {% block styleInclude %}
+        /* y footer k logo ka  css */
+        .logo{
+           
+            width: 140px;
+            position: absolute;
+            /* top: %; */
+            left: 1%;
+
+
+        }
+
+
+        footer style{
+            width:100vh;
+            height: 7rem;
+            background-color:  #2d0b00;
+            margin-top: auto;
+        }
+        .footer p{
+            color: white;
+            background: linear-gradient(to right,#00093c, #2d0b00);
+            font-size: 1rem;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 5rem;
+        }
+
+
+        /* 1 rem == 10px */
+
+
+        {% endblock styleInclude %}
+
+
+    {% comment %} <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+           
+            <div class="banner-text">
+                <h1>MeetMe Patient</h1>
+                <p>Health is the greatest possession</p>
+                <div class="banner-btn">
+                    <a href="signin.html"><span></span>Sign In</a>
+                    <a href="option.html"><span></span>Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="appointments.html">Take Appointments</a></li>
+            </ul>
+        </nav>
+
+
+    </div>
+    <div id="menuBtn">
+        <img src="images/menu.png" id=""menu>
+    </div>
+    <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var  sidenav= document.getElementById("sidenav")
+        var menu = document.getElementById("menu")
+
+
+        sidenav.style.right = "-250px";
+
+
+        menuBtn.onclick = function(){
+            if(sidenav.style.right == "-250px"){
+                sidenav.style.right = "0";
+                menu.src = "images/close.png";
+               
+            }
+            else{
+                sidenav.style.right = "-250px";
+                menu.src = "images/menu.png";
+            }
+        }
+    </script> {% endcomment %}
+
+{% block body %}
+
+{% if messages %}
+            {% for msg in messages %}
+              {{msg}}
+            {% endfor %}
+            <br>
+          {% endif %}
+<div class="banner">
+   <div class="banner-text">
+            <h1>MeetMe Patient</h1>
+            <p>Health is the greatest possession</p>
+            <div class="banner-btn">
+                <a href="signIn"><span></span>Sign In</a>
+                <a href="option"><span></span>Sign Up</a>
+            </div>
+        </div>
+</div>
+    <section id="features">
+        <div class="title-text">
+            <!-- <p>About Us</p> -->
+            <h1>Why Choose Us?</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>Experienced Doctors</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla perspiciatis ipsam maxime id? Eius quibusdam natus provident cupiditate blanditiis facere illum doloremque.</p>
+                       
+                    </div>
+                </div>
+                <h1>EXcellent Services</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla perspiciatis ipsam maxime id? Eius quibusdam natus provident cupiditate blanditiis facere illum doloremque.</p>
+                       
+                    </div>
+                </div>
+                <h1>Online Appointments</h1>
+                <div class="features-desc">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla perspiciatis ipsam maxime id? Eius quibusdam natus provident cupiditate blanditiis facere illum doloremque.</p>
+                    </div>
+                </div>
+        </div>
+        <div class="features-img">
+            <img src="static/img/img1.jpg">
+    </div>
+   
+</div>
+    </section>
+   
+
+
+    {% endblock body %}
+   
+</body>
+</html>
+
+
